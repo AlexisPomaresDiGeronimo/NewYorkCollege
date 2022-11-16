@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+<head>
+  <link rel="stylesheet" th:href="@{/signIn.css}">
+</head>
+<body>
+<div layout:fragment="main-content" th:class="container">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <div class="card">
+        <div class="card-header">Create Account</div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <input type="text" class="rounded" placeholder="Username" style="margin-top: 5%;">
+          </li>
+          <li class="list-group-item">
+            <input type="email" class="rounded" placeholder="Email" >
+          </li>
+          <li class="list-group-item">
+            <input type="password" class="rounded" placeholder="Password">
+          </li>
+          <li class="list-group-item">
+            <input type="password" class="rounded" placeholder="Confirm Password">
+          </li>
+          <li class="list-group-item">
+            <button class="rounded">Create</button>
+          </li>
+          <li class="list-group-item lnk">
+            <p>Have an account? <a href="/">Sign in</a></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

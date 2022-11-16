@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+<head>
+    <link rel="stylesheet" th:href="@{/chat.css}">
+</head>
+<body>
+<div layout:fragment="main-content" th:class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 sz">
+            <div class="card">
+                <div th:class="card-header">Chat</div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="avr col-1 rounded-circle" th:text="'A'"></div>
+                            <div class="txt col-10 rounded" th:text="'Hello World!! I am Alexis and i love programming, im trying to create the best possible text'"></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <textarea class="rounded" placeholder=" Message"></textarea>
+                        <button class="rounded">SEND</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

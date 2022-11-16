@@ -1,0 +1,38 @@
+.container{
+    margin-top:5%;
+}
+div .card{
+    background-color: #202225;
+}
+div .card-header{
+    color: white;
+    text-align: center;
+}
+div .list-group-item{
+    background-color: #36393f;
+}
+div .avr{
+    margin-left: 2%;
+    background-color: white;
+    padding: 1%;
+    text-align: center;
+}
+div .txt{
+    width: 86%;
+    background-color: lightblue;
+    margin-top: -2%;
+    margin-left: 11%;
+
+}
+textarea{
+    width: 100%;
+    border: transparent;
+}
+button{
+    margin-left:70%;
+    margin-bottom:2%;
+    width: 30%;
+    background-color: cornflowerblue ;
+    color:white;
+    border: transparent;
+}
