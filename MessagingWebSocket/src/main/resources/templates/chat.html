@@ -2,13 +2,14 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/layout}">
 <head>
-    <link rel="stylesheet" th:href="@{/chat.css}">
+    <link rel="stylesheet" th:href="@{/css/pages.css}">
 </head>
 <body>
 <div layout:fragment="main-content" th:class="container">
     <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4 sz">
+        <div class="col-3">
+        </div>
+        <div class="col-6 ">
             <div class="card">
                 <div th:class="card-header">Chat</div>
                 <ul class="list-group list-group-flush">
@@ -19,11 +20,16 @@
                         </div>
                     </li>
                     <li class="list-group-item">
-                        <textarea class="rounded" placeholder=" Message"></textarea>
-                        <button class="rounded">SEND</button>
+                        <input type="text" class="rounded" placeholder=" Message">
+                        <button>Send</button>
                     </li>
                 </ul>
             </div>
+        </div>
+        <div class="col-3 text-center">
+            <form class="form-signin" method="post" action="/logout">
+                <button id="lgt" class="rounded" type="submit">Logout</button>
+            </form>
         </div>
     </div>
 </div>
