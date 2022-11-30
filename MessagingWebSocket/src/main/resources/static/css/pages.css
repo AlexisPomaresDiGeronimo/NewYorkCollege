@@ -17,28 +17,36 @@ div .avr{
     color: white;
     margin-top:3%;
     margin-left: 2%;
-    background-color:#3f0d0c;
     padding: 1%;
     text-align: center;
+    background-color: #6610f1;
 }
 div .txt{
     padding:3%;
     width: 86%;
-    background-color: #d8c3a8;
     margin-top: -2%;
     margin-left: 11%;
     margin-bottom:2%;
+    background-color: #ced4da;
+    color: #3d0a91;
 }
 input{
+    margin-left: 1%;
     margin-top: 2%;
     padding: 1%;
     width: 84%;
-    border: 1px solid black;
+    border: 1px solid lightgray;
 }
 button{
     margin-top: -15%;
     width: 14%;
     background-color: transparent;
-    color:#3f0d0c;
     border: transparent;
+    color: #520dc2;
+}
+#lgt{
+    padding: 3%;
+    width: 50%;
+    color: white;
+    background-color: #6610f1 ;
 }
