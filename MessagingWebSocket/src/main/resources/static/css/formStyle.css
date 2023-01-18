@@ -1,0 +1,47 @@
+body{
+    background-color: #ced4da;
+}
+.container{
+    margin-top:3%;
+    height: 50%;
+}
+div .frm{
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+h2{
+    text-align: center;
+    margin-top:2%;
+}
+#msg{
+    color: red;
+    text-align: center;
+}
+input{
+    width: 100%;
+}
+button{
+    width: 100%;
+    background-color: #6610f1 ;
+    color:white;
+    border: transparent;
+    height: 40px;
+}
+button:hover{
+    background-color: #3d0a91;
+}
+#p{
+    margin-top: 5%;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: #520dc2;
+}
+a:hover{
+    color: #3d0a91;
+    text-decoration: none;
+}
+fnc , fn2{
+    color: #520dc2;
+}

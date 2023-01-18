@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+<head>
+  <link rel="stylesheet" th:href="@{/css/pages.css}">
+</head>
+<body>
+<div layout:fragment="main-content" th:class="container">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">This Page is under Construction</div>
+            </div>
+        </div>
+        <div class="col-3 text-center">
+            <form class="form-signin" method="post" action="/logout">
+              <button id="disconnect" class="rounded lgt" type="submit">Logout</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

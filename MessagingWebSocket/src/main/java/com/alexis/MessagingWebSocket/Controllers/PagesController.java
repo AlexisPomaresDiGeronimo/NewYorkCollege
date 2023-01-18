@@ -1,6 +1,8 @@
 package com.alexis.MessagingWebSocket.Controllers;
 
+import com.alexis.MessagingWebSocket.Models.Message;
 import com.alexis.MessagingWebSocket.Models.User;
+import com.alexis.MessagingWebSocket.Repositories.MessageRepo;
 import com.alexis.MessagingWebSocket.Repositories.UserRepo;
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -10,34 +12,38 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.*;
 
 @Controller
 @AllArgsConstructor
 public class PagesController {
     private final UserRepo userRepo;
+    private final MessageRepo messageRepo;
     private final PasswordEncoder passwordEncoder;
 
     @GetMapping("/")
-    public String registration(Model model){
-        model.addAttribute("title","Create Account");
+    public String registration(Model model) {
+        model.addAttribute("title", "Create Account");
         return "register";
     }
+
     @PostMapping("/register")
-    public String register(HttpServletRequest request , Model model){
+    public String register(HttpServletRequest request, Model model) {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String cnf_pass = request.getParameter("cnf_password");
         User user = userRepo.getUserByUsername(username);
-        if (!password.equals(cnf_pass)){
-            model.addAttribute("msg" , "Insert the same password and confirm password!!");
+        if (!password.equals(cnf_pass)) {
+            model.addAttribute("msg", "Insert the same password and confirm password!!");
+            model.addAttribute("username", username);
             return "register";
-        }else if(user != null){
-            if(username.equals(user.getUsername())){
-                model.addAttribute("msg" , "This Username already exists!!");
+        } else if (user != null) {
+            if (username.equals(user.getUsername())) {
+                model.addAttribute("msg", "This Username already exists!!");
+                model.addAttribute("username", username);
             }
             return "register";
-        }
-        else{
+        } else {
             User newUser = new User();
             newUser.setUsername(username);
             newUser.setPassword(passwordEncoder.encode(password));
@@ -46,19 +52,24 @@ public class PagesController {
             return "login";
         }
     }
+
     @GetMapping("/login")
-    public String login(Model model){
-        model.addAttribute("title","Sign In");
+    public String login(Model model) {
+        model.addAttribute("title", "Sign In");
         return "login";
     }
+
     @GetMapping("/chat")
-    public String chat(Model model){
-        model.addAttribute("title","Web Sockets Chat");
+    public String chat(Model model) {
+        model.addAttribute("title", "Web Sockets Chat");
+        List<Message> allMessages = messageRepo.findAll();
+        model.addAttribute("messages", allMessages);
         return "chat";
     }
+
     @GetMapping("/admin")
-    public String admin(Model model){
-        model.addAttribute("title","Administrator Page");
+    public String admin(Model model) {
+        model.addAttribute("title", "Administrator Page");
         return "admin";
     }
 }

@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity @Data @NoArgsConstructor @AllArgsConstructor
 public class  User  {
@@ -15,9 +16,6 @@ public class  User  {
     private String username;
     private String password;
     private String role;     //ROLE_ + name <-- save database
-
-    //    @OneToMany
-    //    private List<Message> messages;
-
-
+//    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    private List<Message> messages;
 }

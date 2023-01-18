@@ -13,19 +13,9 @@ div .card-header{
 div .list-group-item{
     background-color: white;
 }
-div .avr{
-    color: white;
-    margin-top:3%;
-    margin-left: 2%;
-    padding: 1%;
-    text-align: center;
-    background-color: #6610f1;
-}
 div .txt{
     padding:3%;
     width: 86%;
-    margin-top: -2%;
-    margin-left: 11%;
     margin-bottom:2%;
     background-color: #ced4da;
     color: #3d0a91;
@@ -44,9 +34,20 @@ button{
     border: transparent;
     color: #520dc2;
 }
-#lgt{
+#lgt , .lgt{
     padding: 3%;
     width: 50%;
     color: white;
     background-color: #6610f1 ;
+}
+li{
+    text-decoration: none;
+}
+
+#msg_cnt , #messages {
+    border-radius: 5px ;
+    padding: 2%;
+    background-color: #6610f1;
+    color: white;
+    margin-bottom: 1%;
 }

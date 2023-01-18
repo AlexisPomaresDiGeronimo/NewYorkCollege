@@ -15,7 +15,7 @@
                 <h2 class="form-signin-heading">Create Account</h2>
                 <p id="msg" th:text="${msg}"></p>
                 <p>
-                    <input type="text" id="username" name="username" class="form-control rounded" required>
+                    <input type="text" id="username" name="username" class="form-control rounded" required th:value="${username}">
                     <label for="username">Username</label>
                 </p>
                 <p>
